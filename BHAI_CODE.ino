@@ -160,7 +160,7 @@ void loop() {
   
   else if(voice=="hello"  || voice=="hi"){       //for normal greetings like hello or hi.
   print_lcd("Oh, Hi there!.", "");              //prints the response on the LCD
-  hi();
+  hi_bye();
   play_tone();
   display_face();
   }
@@ -267,7 +267,7 @@ void display_face(){
 //this function plays the animation for the hi and bye gesture to be displayed on th screen.
 //calls the HI, HI_2, HI_3, HI_4, HI_5 on the display 5 times after a 30 ms delay.
 
-void hi(){
+void hi_bye(){
   myGLCD.clrScr();
   for(int i=0; i<5; i++){
   myGLCD.drawBitmap(0, 0, HI, 84, 48);
